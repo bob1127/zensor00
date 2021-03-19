@@ -13,7 +13,7 @@ nav {
   top: 0%;
   z-index: 9999;
   .top_nav {
-    background-color: #3784a8;
+    background-color: #3fa4b6;
     @extend %display_center;
     .left_wrap {
       padding-left: 3rem;
@@ -70,9 +70,9 @@ nav {
     background-color: #fff;
     position: absolute;
     top: 20vh;
-    right: 5%;
+    left: 0;
     z-index: 9999;
-    width: 40%;
+    width: 100%;
     filter: blur(6px);
     transition: 0.5s;
     visibility: hidden;
@@ -85,16 +85,35 @@ nav {
       width: 90%;
 
       .item {
+        position: relative;
         z-index: 99999;
         @extend %display_center;
         flex-direction: column;
-        border: 1px solid rgb(233, 233, 233);
-        width: 25%;
+
+        width: 20%;
         margin: 0.2rem;
         transform: scale(1);
+        transition: 0.3s;
 
         &:hover {
-          transform: scale(1.2);
+          transform: scale(1.1);
+          background-color: rgba(59, 154, 192, 0.5);
+        }
+        &:hover .product_name {
+          top: 50%;
+          opacity: 1;
+        }
+        .product_name {
+          transition: 0.4s;
+          color: rgb(15, 134, 163);
+          position: absolute;
+          font-size: 15px;
+          top: 60%;
+          opacity: 0;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 99999;
+          font-weight: 800;
         }
         img {
           width: 100%;

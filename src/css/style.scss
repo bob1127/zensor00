@@ -4,6 +4,30 @@
 #wrap {
   overflow: hidden;
 }
+//title text animation
+
+.wrap {
+  width: 100%;
+
+  background-color: transparent;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 60px;
+}
+
+.quote {
+  margin-top: 0px;
+  font-family: "Libre Baskerville", serif;
+  font-size: 60px;
+  color: #4f5664;
+  line-height: 76px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.split-line {
+  overflow: hidden;
+}
 //取消col 之間的間隔00000
 .margin-top {
   margin-top: 10vmin;
@@ -520,16 +544,18 @@ section.section_chemistry {
     .row {
       .col-md-3 {
         .product_item {
-          padding: 1.2rem 1.7rem;
+          padding: 0.8rem 1.7rem;
           width: 100%;
           border: 0.1px solid rgb(233, 233, 233);
           background-color: #fff;
           .img_wrap {
             position: relative;
+            height: 30vmin;
 
+            overflow: hidden;
             img {
               width: 100%;
-              margin: 1.5rem 0;
+              margin: 0;
               position: absolute;
               top: 0;
               left: 0;
@@ -551,7 +577,7 @@ section.section_chemistry {
             }
           }
           .txt {
-            margin-top: 32vmin;
+            margin-top: 1vmin;
             h5 {
               color: rgb(88, 88, 88);
               transition: 0.3s;
@@ -649,52 +675,6 @@ section.section_others {
   }
 }
 
-section.section_news {
-  .container-fluid {
-    .row {
-      .top-md-6 {
-        @extend %display_center;
-        background-color: $main_blue;
-        .news_txt {
-          padding: 0 2rem;
-          width: 90%;
-          height: 90%;
-          border: 1px solid rgb(255, 255, 255);
-          @extend %display_center;
-          flex-direction: column;
-          h2 {
-            color: white;
-          }
-          h3 {
-            font-size: 1.2rem;
-            color: #ffffff;
-          }
-          p {
-            color: rgb(209, 209, 209);
-          }
-        }
-      }
-      .col-md-6 {
-        .inside_row {
-          .right_txt {
-            padding: 0 2rem;
-          }
-          .col-md-6 {
-            @extend %display_center;
-            .news_img {
-              width: 100%;
-              height: 40vh;
-              background-color: $dark_blue;
-              color: white;
-              @extend %display_center;
-              font-size: 3rem;
-            }
-          }
-        }
-      }
-    }
-  }
-}
 footer {
   padding: 1.5rem 10rem;
   p,
@@ -749,6 +729,71 @@ footer {
         iframe {
           width: 100%;
           height: 40vh;
+        }
+      }
+    }
+  }
+}
+
+section.section_news {
+  .container-fluid {
+    .row {
+      .col-md-12 {
+        .txt {
+          @extend %display_center;
+        }
+        .slick-slider .element {
+          width: 100%;
+          height: 350px;
+          border-radius: 5px;
+          display: inline-block;
+          margin: 0px 5px;
+          overflow: hidden;
+          .wrap {
+            box-shadow: 5px 5px 10px #333;
+            width: 100%;
+            background: linear-gradient(-45deg, #00ffff, #2aa9db);
+            display: flex;
+            .txt {
+              padding: 0 1rem;
+              width: 50%;
+
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+              flex-direction: column;
+              .button {
+                color: white;
+                padding: 0.2rem 0.5rem;
+                border: 1px solid rgb(253, 253, 253);
+                transition: 0.3s;
+                &:hover {
+                  background-color: #fff;
+                  color: rgb(52, 165, 231);
+                }
+              }
+              .link_wrap {
+                display: flex;
+                width: 100%;
+                justify-content: flex-end;
+                img {
+                  width: 30px;
+                  margin: 0 5px;
+                }
+              }
+              h3 {
+                color: rgb(255, 255, 255);
+              }
+              span {
+                color: rgb(233, 233, 233);
+                font-weight: normal;
+                font-size: 16px;
+              }
+            }
+            img {
+              width: 50%;
+            }
+          }
         }
       }
     }
